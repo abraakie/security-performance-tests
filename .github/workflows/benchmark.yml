@@ -1,9 +1,6 @@
 name: Benchmark
 on:
-  pull_request_target:
-    types:
-      - closed
-      - labeled
+  - pull_request
 env:
   JAVA_VERSION: 21
   OPENSEARCH_VERSION: 3.0.0
