@@ -1,0 +1,47 @@
+name: Benchmark
+on:
+  pull_request_target:
+    types:
+      - closed
+      - labeled
+env:
+  JAVA_VERSION: 21
+  OPENSEARCH_VERSION: 3.0.0
+  OPENSEARCH_ADMIN_PASSWORD: Hello_World123
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    name: Benchmark
+    steps:
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+      - name: Checkout Branch
+        uses: actions/checkout@v4
+      - name: Assemble target plugin
+        uses: gradle/gradle-build-action@v3
+        with:
+          cache-disabled: false
+          arguments: assemble
+      - name: Prepare Security Plugin
+        run: mv ./build/distributions/opensearch-security-*.zip ./benchmark/docker/
+      - name: Build Docker Image
+        run: docker build --platform linux/amd64 --build-arg VERSION=${{ env.OPENSEARCH_VERSION }} -f benchmark/docker/benchmark.dockerfile -t opensearchproject/security-benchmark:latest benchmark/docker/
+      - name: Run Benchmark Cluster
+        uses: isbang/compose-action@v1.5.1
+        with:
+          compose-file: "./benchmark/docker-compose.yml"
+        env:
+          OPENSEARCH_INITIAL_ADMIN_PASSWORD: ${{ env.OPENSEARCH_ADMIN_PASSWORD }}
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Benchmark
+        run: pip install opensearch-benchmark
+      #- name: Connection Test
+      #  run: timeout 300 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' https://localhost:9200 -ku admin:Hello_World123)" != "200" ]]; do sleep 5; done' || false
+      - name: Execute Benchmarks
+        run: opensearch-benchmark execute-test --pipeline=benchmark-only --workload=percolator --target-host=https://localhost:9200 --client-options=basic_auth_user:admin,basic_auth_password:${{ env.OPENSEARCH_ADMIN_PASSWORD }},verify_certs:false,timeout:120 --test-mode
