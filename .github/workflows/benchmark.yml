@@ -1,11 +1,11 @@
 name: Benchmark
 on:
   workflow_dispatch:
-  #pull_request:
-  #  branches:
-  #    - main
-  #    - 1.*
-  #    - 2.*
+  pull_request:
+    branches:
+      - main
+      - 1.*
+      - 2.*
 env:
   JAVA_VERSION: 21
   OPENSEARCH_VERSION: 3.0.0
