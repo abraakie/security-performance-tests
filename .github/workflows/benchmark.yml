@@ -57,6 +57,6 @@ jobs:
         with:
           tool: customSmallerIsBetter
           output-file-path: ./results.json
-          external-data-json-path: ./cache/benchmark-data.json
+          #external-data-json-path: ./cache/benchmark-data.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
