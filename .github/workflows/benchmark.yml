@@ -1,6 +1,11 @@
 name: Benchmark
 on:
-  - pull_request
+  workflow_dispatch:
+  #pull_request:
+  #  branches:
+  #    - main
+  #    - 1.*
+  #    - 2.*
 env:
   JAVA_VERSION: 21
   OPENSEARCH_VERSION: 3.0.0
@@ -38,7 +43,18 @@ jobs:
           python-version: 3.8
       - name: Install Benchmark
         run: pip install opensearch-benchmark
-      #- name: Connection Test
-      #  run: timeout 300 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' https://localhost:9200 -ku admin:Hello_World123)" != "200" ]]; do sleep 5; done' || false
       - name: Execute Benchmarks
-        run: opensearch-benchmark execute-test --pipeline=benchmark-only --workload=percolator --target-host=https://localhost:9200 --client-options=basic_auth_user:admin,basic_auth_password:${{ env.OPENSEARCH_ADMIN_PASSWORD }},verify_certs:false,timeout:120 --test-mode
+        run: opensearch-benchmark execute-test --pipeline=benchmark-only --results-format=csv --results-file=./results.csv --on-error=abort --workload=percolator --target-host=https://localhost:9200 --client-options=basic_auth_user:admin,basic_auth_password:${{ env.OPENSEARCH_ADMIN_PASSWORD }},verify_certs:false,timeout:60
+      - name: Prepare Benchmark Results
+        run: python benchmark/result_rewriter.py ./results.csv ./results.json
+      - name: Download previous benchmark data
+        uses: actions/cache@v4
+        with:
+          path: ./cache
+          key: ${{ runner.os }}-benchmark
+      - name: Store Benchmark Results
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          tool: customSmallerIsBetter
+          output-file-path: ./results.json
+          external-data-json-path: ./cache/benchmark-data.json
