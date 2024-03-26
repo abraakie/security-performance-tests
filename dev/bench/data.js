@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1711424402330,
+  "lastUpdate": 1711425796911,
   "repoUrl": "https://github.com/abraakie/security-performance-tests",
   "entries": {
     "Benchmark": [
@@ -57060,6 +57060,498 @@ window.BENCHMARK_DATA = {
           {
             "name": "100th percentile service time percolator_no_score_with_content_ignore_me",
             "value": 8.287031000008938,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_no_score_with_content_ignore_me",
+            "value": 0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Aki Abramowski",
+            "username": "abraakie",
+            "email": "abraakie@web.de"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "f7255c04688787357a16273a9730e1b4040b63a1",
+          "message": "Merge pull request #1 from abraakie/performance-tests\n\nSecurity Benchmarks",
+          "timestamp": "2024-03-20T16:18:32Z",
+          "url": "https://github.com/abraakie/security-performance-tests/commit/f7255c04688787357a16273a9730e1b4040b63a1"
+        },
+        "date": 1711425793275,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Mean Throughput index",
+            "value": 22212.19,
+            "unit": "docs/s"
+          },
+          {
+            "name": "50th percentile latency index",
+            "value": 694.4158610000386,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency index",
+            "value": 1240.3673490000087,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency index",
+            "value": 2472.899876200021,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency index",
+            "value": 3739.9942030000375,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time index",
+            "value": 694.4158610000386,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time index",
+            "value": 1240.3673490000087,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time index",
+            "value": 2472.899876200021,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time index",
+            "value": 3739.9942030000375,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate index",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput wait-until-merges-finish",
+            "value": 0.02407318247472316,
+            "unit": "s/ops"
+          },
+          {
+            "name": "100th percentile latency wait-until-merges-finish",
+            "value": 23.10630299996319,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time wait-until-merges-finish",
+            "value": 23.10630299996319,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate wait-until-merges-finish",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_with_content_president_bush",
+            "value": 0.044326241134751775,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_with_content_president_bush",
+            "value": 3754.8118415000145,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_with_content_president_bush",
+            "value": 3831.2169367000197,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_with_content_president_bush",
+            "value": 3851.4031361300026,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_with_content_president_bush",
+            "value": 3853.455716000042,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_with_content_president_bush",
+            "value": 18.25763600001551,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_with_content_president_bush",
+            "value": 27.414046700005215,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_with_content_president_bush",
+            "value": 54.59918153998844,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_with_content_president_bush",
+            "value": 59.05185900002152,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_with_content_president_bush",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_with_content_saddam_hussein",
+            "value": 0.020189783969311526,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_with_content_saddam_hussein",
+            "value": 7.802655999967101,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_with_content_saddam_hussein",
+            "value": 10.245703200024538,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_with_content_saddam_hussein",
+            "value": 13.489057469999466,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_with_content_saddam_hussein",
+            "value": 13.508112000010897,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_with_content_saddam_hussein",
+            "value": 6.601114999995161,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_with_content_saddam_hussein",
+            "value": 9.221811600008323,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_with_content_saddam_hussein",
+            "value": 11.642243889998555,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_with_content_saddam_hussein",
+            "value": 12.108622000027935,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_with_content_saddam_hussein",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_with_content_hurricane_katrina",
+            "value": 0.020008003201280513,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_with_content_hurricane_katrina",
+            "value": 11.87184249999973,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_with_content_hurricane_katrina",
+            "value": 25.37909449999916,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_with_content_hurricane_katrina",
+            "value": 46.300028999992854,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_with_content_hurricane_katrina",
+            "value": 50.13974399997778,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_with_content_hurricane_katrina",
+            "value": 10.693411500000138,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_with_content_hurricane_katrina",
+            "value": 18.910886500020766,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_with_content_hurricane_katrina",
+            "value": 27.352893180019556,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_with_content_hurricane_katrina",
+            "value": 45.1108380000278,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_with_content_hurricane_katrina",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_with_content_google",
+            "value": 0.05040322580645162,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_with_content_google",
+            "value": 1919.7334024814836,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_with_content_google",
+            "value": 2384.520124596281,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_with_content_google",
+            "value": 2544.546106596276,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_with_content_google",
+            "value": 2550.6054936296323,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_with_content_google",
+            "value": 44.57399899999359,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_with_content_google",
+            "value": 62.34655299996917,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_with_content_google",
+            "value": 78.00334547996673,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_with_content_google",
+            "value": 84.83498699996517,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_with_content_google",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_no_score_with_content_google",
+            "value": 0.010224948875255624,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_no_score_with_content_google",
+            "value": 6.489604500018231,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_no_score_with_content_google",
+            "value": 13.064402100013698,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_no_score_with_content_google",
+            "value": 16.68433281000263,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_no_score_with_content_google",
+            "value": 19.398201000001336,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_no_score_with_content_google",
+            "value": 5.470738499980143,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_no_score_with_content_google",
+            "value": 8.850702100033917,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_no_score_with_content_google",
+            "value": 13.72519194000519,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_no_score_with_content_google",
+            "value": 16.888929000003827,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_no_score_with_content_google",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_with_highlighting",
+            "value": 0.020296326364927945,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_with_highlighting",
+            "value": 8.523182999994106,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_with_highlighting",
+            "value": 10.43507420001788,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_with_highlighting",
+            "value": 13.566892230016386,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_with_highlighting",
+            "value": 14.946084000030169,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_with_highlighting",
+            "value": 7.118218499982731,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_with_highlighting",
+            "value": 9.274243599980991,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_with_highlighting",
+            "value": 12.6054027700269,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_with_highlighting",
+            "value": 12.864165999985744,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_with_highlighting",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_with_content_ignore_me",
+            "value": 12.5,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_with_content_ignore_me",
+            "value": 7437.399447499956,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_with_content_ignore_me",
+            "value": 7566.4453542000165,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_with_content_ignore_me",
+            "value": 7635.55252143995,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_with_content_ignore_me",
+            "value": 7644.492759999935,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_with_content_ignore_me",
+            "value": 7433.81792300005,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_with_content_ignore_me",
+            "value": 7560.693622900021,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_with_content_ignore_me",
+            "value": 7633.512526420022,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_with_content_ignore_me",
+            "value": 7643.665809999902,
+            "unit": "ms"
+          },
+          {
+            "name": "error rate percolator_with_content_ignore_me",
+            "value": 0,
+            "unit": "%"
+          },
+          {
+            "name": "Mean Throughput percolator_no_score_with_content_ignore_me",
+            "value": 0.06697923643670463,
+            "unit": "s/ops"
+          },
+          {
+            "name": "50th percentile latency percolator_no_score_with_content_ignore_me",
+            "value": 5.4781810000577025,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile latency percolator_no_score_with_content_ignore_me",
+            "value": 6.591365633335045,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile latency percolator_no_score_with_content_ignore_me",
+            "value": 8.171451530106438,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile latency percolator_no_score_with_content_ignore_me",
+            "value": 10.827212000094733,
+            "unit": "ms"
+          },
+          {
+            "name": "50th percentile service time percolator_no_score_with_content_ignore_me",
+            "value": 4.5846904999962135,
+            "unit": "ms"
+          },
+          {
+            "name": "90th percentile service time percolator_no_score_with_content_ignore_me",
+            "value": 5.490066200013644,
+            "unit": "ms"
+          },
+          {
+            "name": "99th percentile service time percolator_no_score_with_content_ignore_me",
+            "value": 6.899243689915708,
+            "unit": "ms"
+          },
+          {
+            "name": "100th percentile service time percolator_no_score_with_content_ignore_me",
+            "value": 9.85802600007446,
             "unit": "ms"
           },
           {
