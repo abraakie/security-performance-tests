@@ -3,6 +3,11 @@ on:
   #schedule:
   #  - cron: "*/30 * * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 1.*
+      - 2.*
   pull_request:
     branches:
       - main
@@ -59,6 +64,7 @@ jobs:
         with:
           tool: customSmallerIsBetter
           output-file-path: ./results.json
-          #external-data-json-path: ./cache/benchmark-data.json
+          external-data-json-path: ./cache/benchmark-data.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: true
+          fail-on-alert: true
+          alert-threshold: '150%'
