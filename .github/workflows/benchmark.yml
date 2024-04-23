@@ -29,11 +29,12 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
       - name: Checkout Branch
         uses: actions/checkout@v4
-      - name: Assemble target plugin
+      - name: Set up gradle
         uses: gradle/actions/setup-gradle@v3
         with:
           cache-disabled: false
-          arguments: assemble
+      - name: Assemble target plugin
+        run: ./gradlew assemble
       - name: Prepare Security Plugin
         run: mv ./build/distributions/opensearch-security-*.zip ./benchmark/docker/
       - name: Build Docker Image
