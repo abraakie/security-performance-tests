@@ -30,7 +30,7 @@ jobs:
       - name: Checkout Branch
         uses: actions/checkout@v4
       - name: Assemble target plugin
-        uses: gradle/gradle-build-action@v3
+        uses: gradle/actions/setup-gradle@v3
         with:
           cache-disabled: false
           arguments: assemble
